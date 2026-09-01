@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Events from "./pages/Events";
+import Contact from "./pages/Contact";
 
-const App = () => {
+function App() {
   return (
-    <div>Apphshshss</div>
-  )
+    <Routes>
+      <Route element={<Home />} path="/" />
+      <Route element={<Events />} path="/events" />
+      <Route element={<Contact />} path="/contact" />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
